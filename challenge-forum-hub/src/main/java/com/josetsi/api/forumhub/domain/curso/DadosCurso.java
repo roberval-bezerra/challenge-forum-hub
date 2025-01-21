@@ -1,0 +1,9 @@
+// DTO para representar os dados de um curso
+package com.josetsi.api.forumhub.domain.curso;
+
+public record DadosCurso(Long id, String nome, String categoriaCurso) {
+
+    public DadosCurso(Curso curso) {
+        this(curso.getId(), curso.getNome(), curso.getCategoria());
+    }
+}
